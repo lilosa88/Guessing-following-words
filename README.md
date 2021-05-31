@@ -30,7 +30,7 @@
   - We iterate over this list of tokens and create a number of n_grams_sequences, namely the first two words in the sentence, then the first three words and so       on. The result is somehting like this: for the first line in the song, the following input sequences will be generated.
 
  <p align="center">
-  <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Captura%20de%20Pantalla%202021-05-31%20a%20la(s)%2018.40.21.png" width="320" height="460">
+  <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Captura%20de%20Pantalla%202021-05-31%20a%20la(s)%2018.40.21.png" width="320" height="200">
  </p>  
 
 
