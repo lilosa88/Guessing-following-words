@@ -43,13 +43,13 @@
  
   - We turn tthis into x's and y's, i.e. the input values and their labels. When you think about it, now that the sentences are represented in this way, all we       have to do is take all but the last character as the x and then use the last character as the y on our label. 
   - I did one-hot encode into the labels as this really is a classification problem. So to one-hot encode, I can use the keras utility to convert a list to a         categorical. I simply give it the list of labels and the number of classes which is my number of words, and it will create a one-hot encoding of the labels. 
-    So for example, I will obtain something like:
+    So for example, I will obtain something like: if we consider this list of tokens as a sentence, then the x is the list up to the last value, and the label is     the last value which in this case is 70. The y is a one-hot encoded array whether length is the size of the corpus of words and the value that is set to one    is the one at the index of the label which in this case is the 70th element. 
     
   <p align="center">
-  <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Captura%20de%20Pantalla%202021-05-31%20a%20la(s)%2018.52.02.png" width="320" height="200">
+  <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Captura%20de%20Pantalla%202021-05-31%20a%20la(s)%2018.59.31.png" width="320" height="200">
  </p> 
  
-    if we consider this list of tokens as a sentence, then the x is the list up to the last value, and the label is the last value which in this case is 70. The y is a one-hot encoded array whether length is the size of the corpus of words and the value that is set to one is the one at the index of the label which in this case is the 70th element. Okay. You now have all of the data ready to train a network for prediction. Hopefully, this was useful for you. You'll see the neural network in the next video. But first, let's see your screen cast of processing the data, using the methods that you saw in this lesson.
+    
  
  
  
