@@ -66,3 +66,11 @@
  <p align="center">
   <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Screenshot%20from%202021-05-31%2019-05-51.png" width="320" height="260">
  </p>   
+ 
+ # How to generate new text based on those predictions
+ 
+ - We start with a single sentence. For example, 'Lawrence went to Dublin.' I'm calling this sentence the seed. If I want to predict the next 100 words in the sentence so I need to do the following for each predicted word:
+    - I will tokenizer my seed using the text_to_sequences method on the tokenizer. 
+    - Then I pad the sequence so it matches the ones in the training set. 
+    - We pass the result to the model to get a prediction back. This will give us the token of the word most likely to be the next one in the sequence.
+    - We do a reverse lookup on the word index items to turn the token back into a word and to add that to our seed texts.
