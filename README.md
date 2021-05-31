@@ -33,10 +33,15 @@
   <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Captura%20de%20Pantalla%202021-05-31%20a%20la(s)%2018.40.21.png" width="320" height="200">
  </p>  
 
-
-
   - The same process will happen for each line. Therefore the input sequences are simply the sentences being broken down into phrases, the first two words, the       first three words, etc. 
-  - We next need to find the length of the longest sentence in the corpus. To do this, we'll iterate over all of the sequences and find the longest one with code like this. Once we have our longest sequence length, the next thing to do is pad all of the sequences so that they are the same length. We will pre-pad with zeros to make it easier to extract the label, you'll see that in a few moments. So now, our line will be represented by a set of padded input sequences that looks like this. Now, that we have our sequences, the next thing we need to do is turn them into x's and y's, our input values and their labels. When you think about it, now that the sentences are represented in this way, all we have to do is take all but the last character as the x and then use the last character as the y on our label. We do that like this, where for the first sequence, everything up to the four is our input and the two is our label. Similarly, here for the second sequence where the input is two words and the label is the third word, tokenized to 66. Here, the input is three words and the label is eight, which was the fourth word in the sentence. By this point, it should be clear why we did pre-padding, because it makes it much easier for us to get the label simply by grabbing the last token.
+  - We found the length of the longest sentence in the corpus. To do this, we iterate over all of the sequences and find the longest one.
+  -  Once we have our longest sequence length, the next thing to do is pad all of the sequences so that they are the same length. So now we have somehting like:
+
+ <p align="center">
+  <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Captura%20de%20Pantalla%202021-05-31%20a%20la(s)%2018.40.21.png" width="320" height="200">
+ </p> 
+  -  
+  -    So now, our line will be represented by a set of padded input sequences that looks like this. Now, that we have our sequences, the next thing we need to do is turn them into x's and y's, our input values and their labels. When you think about it, now that the sentences are represented in this way, all we have to do is take all but the last character as the x and then use the last character as the y on our label. We do that like this, where for the first sequence, everything up to the four is our input and the two is our label. Similarly, here for the second sequence where the input is two words and the label is the third word, tokenized to 66. Here, the input is three words and the label is eight, which was the fourth word in the sentence. By this point, it should be clear why we did pre-padding, because it makes it much easier for us to get the label simply by grabbing the last token.
  
  
 # Neural Network
