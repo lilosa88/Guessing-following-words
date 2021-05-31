@@ -65,4 +65,4 @@
   
  <p align="center">
   <img src="https://github.com/lilosa88/Guessing-following-words/blob/main/Images/Screenshot%20from%202021-05-31%2019-05-51.png" width="320" height="260">
- </p>  
+ </p>   
