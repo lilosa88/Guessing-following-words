@@ -51,11 +51,11 @@
  
  
 # Neural Network
-  
+
   - This model was created using tf.keras.models.Sequential, which defines a SEQUENCE of layers in the neural network. These sequence of layers used were the following:
-  - One Embedding layer:  This is the process that help us to go from just a string of numbers representing words to actually get text sentiment. This process is     called embedding, with the idea being that words and associated words are clustered as vectors in a multi-dimensional space. 
-  - One Bidirectional LSTM layer
-  - One Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the Dense layer       consisted in 263 neurons with softmax as an activation function.
+  - One Embedding layer:  This is the process that help us to go from just a string of numbers representing words to actually get text sentiment. This process is     called embedding, with the idea being that words and associated words are clustered as vectors in a multi-dimensional space. We'll want it to handle all of       our words, so we set that in the first parameter. The second parameter is the number of dimensions to use to plot the vector for a word. I'm going to keep it     at 64 for now. Finally, the size of the input dimensions will be fed in, and this is the length of the longest sequence minus 1. We subtract one because we       cropped off the last word of each sequence to get the label, so our sequences will be one less than the maximum sequence length.
+  - One Bidirectional LSTM layer: I use 20 units.
+  - One Dense layers: This adds a layer of neurons. Each layer of neurons has an activation function to tell them what to do. Therefore, the Dense layer              consisted in 263 neurons which correspond to the total number of words, which is the same size that we used for the one-hot encoding. Thus this layer will have one neuron, per word and that neuron should light up when we predict a given word. Softmax is the choseen activation function.
 
 - We built this model using adam optimizer and categorical_crossentropy as loss function, as we're classifying to different classes.
 
